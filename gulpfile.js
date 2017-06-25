@@ -4,9 +4,10 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
+    image = require('gulp-image'),
     concat = require('gulp-concat'),
     serve = require('gulp-serve'),
-    // ghPages = require('gulp-gh-pages'),
+    ghPages = require('gulp-gh-pages'),
     // clean = require('gulp-clean'), unused
     gih = require('gulp-include-html'),
     gulpWebpack = require('gulp-webpack'),
@@ -60,6 +61,12 @@ gulp.task('html', () => {
     .pipe(connect.reload());
 });
 
+gulp.task('image', function () {
+  gulp.src(['./src/assets/*.jpg', './src/assets/*.png', './src/assets/*.svg'])
+    .pipe(image())
+    .pipe(gulp.dest('./dest/assets'));
+});
+
 //livereload
 gulp.task('connect', () => {
   connect.server({
@@ -76,19 +83,19 @@ gulp.task('watch', () => {
   gulp.watch(['./src/js/*.js', './src/js/**/*.js'], ['js']);
 });
 
-gulp.task('build', ['html', 'sass', 'js']);
+gulp.task('build', ['html', 'sass', 'js', 'image']);
 
 //use to test deployment artifact locally
 gulp.task('serve', ['build'], serve('dest'));
 
-// this task is used to deploy to your very own GitHub Page
-// gulp.task('deploy', ['build'], function () {
-//   gulp.src('./dest/**/*')
-//     .pipe(ghPages({
-//       remoteUrl: 'url to your gh page',
-//       branch: 'master'
-//     }))
-// });
+this task is used to deploy to your very own GitHub Page
+gulp.task('deploy', ['build'], function () {
+  gulp.src('./dest/**/*')
+    .pipe(ghPages({
+      remoteUrl: 'https://github.com/niarve/lidget-deploy',
+      branch: 'master'
+    }))
+});
 
 //default task, i.e. 'gulp' with no additional parameters
 gulp.task('default', ['connect', 'watch', 'build']);

@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('app', []);
+var app = angular.module('app', ['ui.bootstrap']);
 
 require('./controllers/controller.js');
 require('./directives/directive.js');

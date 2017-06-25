@@ -1,7 +1,13 @@
-<div class="navbar" ng-controller="MainController as MainCtrl">
-  <ul class="nav nav-tabs nav-justified ">
-    <li role="presentation"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Products</a></li>
-    <li role="presentation"><a href="#">Learn</a></li>
-  </ul>
+<div class="row top-title"  ng-controller="MainController as MainCtrl">
+  <h1>Lidget</h1>
+  <p>Build, Customize, Learn</p>
+  <iframe width="700" height="400" src="https://www.youtube.com/embed/1Mlhnt0jMlg" frameborder="0" allowfullscreen></iframe>
+  <div class="row checkout">
+    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+         Learn the science
+     </button>
+    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+        Check out our products
+     </button>
+ </div>
 </div>
