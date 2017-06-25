@@ -1,12 +1,18 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
-    <button class="btn btn-secondary" ng-click="route('home')">Lidget</Button>
+		<ul class="nav nav-tabs margin-left">
+      <li>
+        <a ng-click="route('home')">
+          <img class="nav-logo" src="assets/logo.png" />
+        </a>
+      </li>
+    </ul>
 	</div>
   <div class="collapse navbar-collapse right" uib-collapse="isNavCollapsed">
-		<ul class="nav navbar-nav">
-      <button class="btn btn-secondary" ng-click="route('learn')">Learn</Button>
-      <button class="btn btn-secondary" ng-click="route('kits')">Kits</Button>
-      <button class="btn btn-secondary" ng-click="route('about')">About</Button>
+		<ul class="nav nav-tabs">
+      <li><a ng-click="route('learn')">Learn</a></li>
+      <li><a ng-click="route('kits')">Kits</a></li>
+      <li><a ng-click="route('about')">About</a></li>
 		</ul>
 	</div>
 </nav>

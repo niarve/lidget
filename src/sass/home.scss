@@ -5,10 +5,24 @@
   opacity: .8,
 }
 
+.nav-logo {
+  height: 2em;
+}
+
+.home-logo {
+  margin-top: 5em;
+  height: 4em;
+}
+
 .right {
   position: fixed;
+  height: 2em;
   right: 0;
-  margin: 0 2em;
+  margin: 0 4em;
+}
+
+.margin-left {
+  margin-left: 4em;
 }
 
 .top-title {
