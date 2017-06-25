@@ -88,12 +88,13 @@ gulp.task('build', ['html', 'sass', 'js', 'image']);
 //use to test deployment artifact locally
 gulp.task('serve', ['build'], serve('dest'));
 
-this task is used to deploy to your very own GitHub Page
+//this task is used to deploy to your very own GitHub Page
 gulp.task('deploy', ['build'], function () {
   gulp.src('./dest/**/*')
     .pipe(ghPages({
-      remoteUrl: 'https://github.com/niarve/lidget-deploy',
-      branch: 'master'
+      remoteUrl: 'https://github.com/niarve/lidget-deploy.git',
+      branch: 'master',
+      force: true
     }))
 });
 
