@@ -1,0 +1,11 @@
+{
+  "name": "lidget",
+  "version": "1.0.0",
+  "description": "Lego Fidget Spinner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Iarve",
+  "license": "ISC"
+}
