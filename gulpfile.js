@@ -92,7 +92,7 @@ gulp.task('serve', ['build'], serve('dest'));
 gulp.task('deploy', ['build'], function () {
   gulp.src('./dest/**/*')
     .pipe(ghPages({
-      remoteUrl: 'https://github.com/niarve/lidget-deploy.git',
+      remoteUrl: 'https://github.com/Lidget/lidget-deploy.git',
       branch: 'master',
       force: true
     }))
