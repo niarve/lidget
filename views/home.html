@@ -1,12 +1,12 @@
-<div class="row top-title"  ng-controller="MainController as MainCtrl">
+<div ng-if="show('home')" class="row top-title">
   <h1>Lidget</h1>
   <p>Build, Customize, Learn</p>
-  <iframe width="700" height="400" src="https://www.youtube.com/embed/1Mlhnt0jMlg" frameborder="0" allowfullscreen></iframe>
+  <iframe width="700" height="400" src="https://www.youtube.com/embed/_9EaK3fES5A" frameborder="0" allowfullscreen></iframe>
   <div class="row checkout">
-    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+    <button type="button" class="btn btn-primary" ng-click="route('learn')">
          Learn the science
      </button>
-    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+    <button type="button" class="btn btn-primary" ng-click="route('kits')">
         Check out our products
      </button>
  </div>
