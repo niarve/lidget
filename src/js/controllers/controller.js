@@ -2,7 +2,6 @@
 
 angular.module('app').controller('MainController', ['$scope', ($scope) => {
   $scope.page = 'home';
-  console.log('showing', $scope.show);
 
   $scope.route = function(page) {
     $scope.page = page;
@@ -11,4 +10,23 @@ angular.module('app').controller('MainController', ['$scope', ($scope) => {
   $scope.show = function(page) {
     return $scope.page === page;
   }
+
+  $scope.kits = [
+    {
+      cost: '12.00',
+      id: 0,
+      image: 'assets/lidget2.jpg',
+      name: 'Lidget 1.0',
+      description: 'The Ultimate Lego Compatible Fidget Spinner',
+      sale: 'google.com'
+    },
+    {
+      cost: '12.00',
+      id: 1,
+      image: 'assets/lidget2.jpg',
+      name: 'Lidget 1.0',
+      description: 'The Ultimate Lego Compatible Fidget Spinner',
+      sale: 'google.com'
+    }
+  ]
 }]);

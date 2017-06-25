@@ -1,0 +1,27 @@
+.kits {
+  padding: 0 15em;
+
+  .jumbotron {
+    margin: 0 5em !important;
+  }
+
+  .kit {
+    img {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      height: 12em;
+      width: 14em;
+    }
+
+    .left-align {
+      text-align: justify;
+    }
+
+    .margin-top {
+      margin-top: 3em;
+    }
+  }
+}

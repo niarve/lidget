@@ -1,3 +1,26 @@
-<div ng-if="show('kits')" class="row top-title"  ng-controller="MainController as MainCtrl">
-  <h1>kits</h1>
+<div ng-if="show('kits')" class="row top-title kits">
+  <h1>Kits</h1>
+  <hr />
+
+  <div class="jumbotron kit" ng-repeat="kit in kits">
+    <div class="container">
+      <div class="media">
+        <div class="media-left media-middle">
+          <a href="#">
+            <img class="media-object" src="{{kit.image}}">
+          </a>
+        </div>
+        <div class="media-body">
+          <div class="media-left left-align">
+            <h4>{{kit.name}}</h4>
+            <h6>Price: ${{kit.cost}}</h6>
+            <h6>Description: ${{kit.description}}</h6>
+          </div>
+          <div class="left-align margin-top">
+            <a href="http://www.{{kit.sale}}">Purchase</a>
+          <div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
