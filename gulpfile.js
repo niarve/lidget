@@ -95,7 +95,7 @@ gulp.task('deploy', ['build'], function () {
       remoteUrl: 'https://github.com/Lidget/lidget-deploy.git',
       branch: 'master',
       force: true
-    }))
+    }));
 });
 
 //default task, i.e. 'gulp' with no additional parameters
